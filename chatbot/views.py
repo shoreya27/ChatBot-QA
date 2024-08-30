@@ -55,7 +55,9 @@ def upload_files(request):
     return JsonResponse({'error': 'Invalid request method.'}, status=405)
 
 def get_retriever():
-    
+    '''
+    Function job is to load pdf and return the vector store retriever
+    '''
     pdf_path = os.path.join(C_DIR, 'uploads', 'context.pdf')
     loader = PyPDFLoader(pdf_path)
     docs = loader.load()
@@ -102,4 +104,4 @@ def generate_answers(request):
     for question in questions:
         results = rag_chain.invoke({"input": question})
         ques_ans[question] = results['answer']
-    return JsonResponse(ques_ans, status=201)
+    return JsonResponse(ques_ans, status=200)
