@@ -26,9 +26,9 @@ python3.12 -m venv venv
 
 ### Step 2: Activate the Virtual Environment
 
-- On Windows: venv\Scripts\activate
+- On Windows: ```venv\Scripts\activate```
 
-- On macOS and Linux: source venv/bin/activate
+- On macOS and Linux: ```source venv/bin/activate```
 
 ### Step 3: Install Dependencies
 Install the required libraries listed in requirements.txt:
@@ -36,8 +36,8 @@ Install the required libraries listed in requirements.txt:
 - pip install -r requirements.txt
 
 ###  Step 4: Run the Django Server
-- python manage.py migrate
-- python manage.py runserver
+- ```python manage.py migrate```
+- ```python manage.py runserver```
 
     The server will be available at http://127.0.0.1:8000/.
 
